@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Redirecionando ao Whatsap...</title>
+    <script>
+
+var links = [
+  "https://wa.me/5577998769673?text=Oi%2C+Kelly%21+Eu+quero+comprar+o+seu+conte%C3%BAdo+privado%21"
+];
+
+function redirecionarAleatoriamente() {
+  if (links.length === 0) {
+    links = [
+      "https://wa.me/5577998769673?text=Oi%2C+Kelly%21+Eu+quero+comprar+o+seu+conte%C3%BAdo+privado%21"
+    ];
+  }
+ 
+  var indice = Math.floor(Math.random() * links.length);
+  var link = links[indice];
+  links.splice(indice, 1);
+  window.location.href = link;
+}
+
+window.addEventListener("load", redirecionarAleatoriamente);
+
+    </script>
+  </head>
+</html>
